@@ -15,45 +15,35 @@
 </head>
 
 <body>
-    <section class="m-0">
+
+    <header class="header-wrapper">
         <div class="container">
             <div class="header" id="header">
-                <div>
-                    <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa55008f302348b1f7703_logo.svg"
-                        alt="Skillex Logo" class="logo">
-                </div>
+            <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa55008f302348b1f7703_logo.svg"
+                alt="Skillex Logo" class="logo">
 
-                <button class="menu-toggle" id="menuToggle">
-                    ✕
-                </button>
+            <div class="menu-nav" id="mobileMenu">
+                <a href="#topsection" class="link">Find Passion</a>
+                <a href="#categories" class="link">Categories</a>
+                <a href="#skills" class="link">Skills</a>
+                <a href="#customers" class="link">Customers</a>
 
-                <div class="menu-nav active" id="mobileMenu">
-
-                    <a class="link topsection active">
-                        Find Passion
-                    </a>
-
-                    <a class="link categories">
-                        Categories
-                    </a>
-
-                    <a class="link skills">
-                        Skills
-                    </a>
-
-                    <a class="link customers">
-                        Customers
-                    </a>
-
-                </div>
-
-                <div class="btn-group">
-                    <a class="login">Login</a>
+                <div class="mobile-btn-group">
+                    <!-- <a href="#" class="link login">Login</a> -->
+                     <button class="login">Login</a>
                     <button class="btn free-trial">Free Trial</button>
                 </div>
             </div>
+
+            <div class="btn-group">
+                <a class="link">Login</a>
+                <button class="btn free-trial">Free Trial</button>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">☰</button> 
         </div>
-    </section>
+    </div>
+    </header>
 
     <section id="topsection">
         <div class="container">
@@ -64,10 +54,11 @@
                         <h2>Learn.</h2>
                         <h2>Grow.</h2>
                     </div>
-                    <div class="input">
+
+                    <form class="subscribe-box top">
                         <input type="text" placeholder="find your passion" class="email-input">
-                        <button class="go-btn">Go</button>
-                    </div>
+                        <button type="submit">GO</button>
+                    </form>
                 </div>
 
                 <div class="slider">
@@ -77,38 +68,43 @@
                         <div class="slide-content">
                             <div class="hover-text">
                                 <p class="text">Writing<br> Course</p>
-                                <p class="topics">100</br> Topics</p>
+                                <p class="topics">100<br> Topics</p>
                             </div>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/6183bce7320d030e82c15028_hero_person-1.webp"
+                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/6183bce3e584104be2e330e0_hero_person-2.webp"
                             alt="Skillex Logo" class="slide-logo">
                         <div class="slide-content">
                             <p class="category">Technology</p>
                             <div class="hover-text">
                                 <p class="text">Technology<br> Course</p>
-                                <p class="topics">100</br> Topics</p>
+                                <p class="topics">100<br> Topics</p>
                             </div>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/6183bce7320d030e82c15028_hero_person-1.webp"
+                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/6183bb01e5841050e8e31f3b_hero_person-3.webp"
                             alt="Skillex Logo" class="slide-logo">
                         <div class="slide-content">
-                            <p class="category">Health</p>
+                            <p class="category">Business</p>
                             <div class="hover-text">
-                                <p class="text">Health<br> Course</p>
-                                <p class="topics">100</br> Topics</p>
+                                <p class="text">Business<br> Course</p>
+                                <p class="topics">100<br> Topics</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="input hide-system">
+                <!-- <div class="input hide-system">
                     <input type="text" placeholder="find your passion" class="email-input">
                     <button class="go-btn">Go</button>
-                </div>
+                </div> -->
+
+                <form class="subscribe-box middle">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">GO</button>
+                </form>
             </div>
         </div>
     </section>
@@ -117,65 +113,95 @@
         <div class="container">
             <div class="categories">
                 <h2>Unlimited access to 100+ instructors.</h2>
+                <!-- <ul class="cat-nav">
+                    <li><a href="#" data-cat="all" class="active">All Categories</a></li>
+                    <li><a href="#" data-cat="entertainment">Entertainment</a></li>
+                    <li><a href="#" data-cat="lifestyle">LifeStyle</a></li>
+                    <li><a href="#" data-cat="writing">Writing</a></li>
+                    <li><a href="#" data-cat="technology">Technology</a></li>
+                    <li><a href="#" data-cat="health">Health</a></li>
+                </ul> -->
+
                 <ul class="cat-nav">
-                    <li><a class="active">All Categories</a></li>
-                    <li><a class="">Entertainment</a></li>
-                    <li><a class="">LifeStyle</a></li>
-                    <li><a class="">Writing</a></li>
-                    <li><a class="">Technology</a></li>
-                    <li><a class="">Health</a></li>
+                    <li class="active">All Categories</li>
+                    <li>Entertainment</li>
+                    <li>LifeStyle</li>
+                    <li>Writing</li>
+                    <li>Technology</li>
+                    <li>Health</li>
                 </ul>
 
                 <div class="card-wrapper">
-                    <div class="card card-1">
+
+                    <div class="course-item card-1" data-cat="all">
+
                         <span class="hover-arrow">
                             <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
-                                alt="Skillex Logo" class="card-logo">
+                                alt="Arrow" class="arrow-icon">
                         </span>
-                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5505ecb8e2f5f217405_categories_01.webp"
-                            alt="Skillex Logo" class="card-logo">
-                        <!-- <div class="content">
-                                            <h3>Expert Instructors</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc.</p>
-                                        </div> -->
-                    </div>
-                    <div class="card card-2">
-                        <span class="hover-arrow">
-                            <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
-                                alt="Skillex Logo" class="card-logo">
-                        </span>
-                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550a239182daefe2e21_categories_02.webp"
-                            alt="Skillex Logo" class="card-logo">
-                        <!-- <div class="content">
-                            <h3>Comprehensive Curriculum</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc.</p>
-                        </div> -->
-                    </div>
-                    <div class="card card-3">
-                        <span class="hover-arrow">
-                            <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
-                                alt="Skillex Logo" class="card-logo">
-                        </span>
-                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550c4055a4a51c6d4ff_categories_03.webp"
-                            alt="Skillex Logo" class="card-logo">
-                        <!-- <div class="content">
-                            <h3>Flexible Learning</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc.</p> 
-                        </div>-->
-                    </div>
-                    <div class="card card-4">
-                        <span class="hover-arrow">
-                            <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
-                                alt="Skillex Logo" class="card-logo">
-                        </span>
-                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550a23918491cfe2e20_categories_04-p-500.webp"
-                            alt="Skillex Logo" class="card-logo">
+
+                        <div class="image-wrapper">
+                            <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5505ecb8e2f5f217405_categories_01.webp"
+                                alt="Expert Instructors" class="card-image">
+                        </div>
+
                         <div class="content">
-                            <h3>Flexible Learning</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc.</p>
+                            <h3>Expert Instructors</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
 
                     </div>
+                    <div class="course-item card-2" data-cat="all">
+                        <span class="hover-arrow">
+                            <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
+                                alt="Skillex Logo">
+                        </span>
+                        <div class="image-wrapper">
+
+                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550a239182daefe2e21_categories_02.webp"
+                            alt="Skillex Logo" class="card-logo">
+                        </div>
+                        <div class="content">
+                            <h3>Comprehensive Curriculum</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="course-item card-3" data-cat="all">
+                            <span class="hover-arrow">
+                                <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
+                                    alt="Skillex Logo">
+                            </span>
+                            <div class="image-wrapper">
+
+                                <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550c4055a4a51c6d4ff_categories_03.webp"
+                                    alt="Skillex Logo" class="card-logo">
+                            </div>
+                        <div class="content">
+                            <h3>Flexible Learning</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                        </div>
+                    </div>
+                    <div class="course-item card-4" data-cat="all">
+
+                        <span class="hover-arrow">
+                                <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
+                                    alt="Arrow Icon" class="arrow-icon">
+                            </span>
+
+                        <div class="image-wrapper">
+                            <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550a23918491cfe2e20_categories_04-p-500.webp"
+                                alt="Flexible Learning" class="card-image">
+
+                        </div>
+
+                        <div class="content">
+                            <h3>Flexible Learning</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -185,92 +211,96 @@
 
         <div class="container">
 
-            <div class="top">
+            <div class="skills">
 
-                <div class="title">
-                    <h2>
-                        Get the skills you need for a job that is in demand.
-                    </h2>
-                </div>
+                <div class="top">
 
-                <div class="text">
-                    <p>
-                        The modern labor market dictates its own terms.
-                        Today, to be a competitive specialist requires
-                        more than professional skills.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="bottom">
-
-                <div class="features">
-
-                    <div class="item">
-
-                        <div class="icon">
-                            <img
-                                src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550b1eff7681300db93_ico_skills-leadership.svg">
-                        </div>
-
-                        <div class="info">
-                            <h4>Leadership</h4>
-                            <p>Fully committed to the success company</p>
-                        </div>
-
+                    <div class="title">
+                        <h2>
+                            Get the skills you need for a job that is in demand.
+                        </h2>
                     </div>
 
-                    <div class="item">
-
-                        <div class="icon">
-                            <img
-                                src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5500e03d92bc1747cb2_ico_skills-responsibility.svg">
-                        </div>
-
-                        <div class="info">
-                            <h4>Responsibility</h4>
-                            <p>Employees will always be my top priority</p>
-                        </div>
-
-                    </div>
-
-                    <div class="item">
-
-                        <div class="icon">
-                            <img
-                                src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5506ec5691cba88bb5b_ico_skills-flexibility.svg">
-                        </div>
-
-                        <div class="info">
-                            <h4>Flexibility</h4>
-                            <p>The ability to switch is an important skill</p>
-                        </div>
-
+                    <div class="text">
+                        <p>
+                            The modern labor market dictates its own terms.
+                            Today, to be a competitive specialist requires
+                            more than professional skills.
+                        </p>
                     </div>
 
                 </div>
 
-                <div class="media">
+                <div class="bottom">
 
-                    <div class="stats">
+                    <div class="features">
 
-                        <div class="details">
-                            <h3>10</h3>
-                            <p>Years Experiences</p>
+                        <div class="item">
+
+                            <div class="icon">
+                                <img
+                                    src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550b1eff7681300db93_ico_skills-leadership.svg">
+                            </div>
+
+                            <div class="info">
+                                <h4>Leadership</h4>
+                                <p>Fully committed to the success company</p>
+                            </div>
+
                         </div>
 
-                        <div class="details">
-                            <h3>250</h3>
-                            <p>Types of Courses</p>
+                        <div class="item">
+
+                            <div class="icon">
+                                <img
+                                    src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5500e03d92bc1747cb2_ico_skills-responsibility.svg">
+                            </div>
+
+                            <div class="info">
+                                <h4>Responsibility</h4>
+                                <p>Employees will always be my top priority</p>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+
+                            <div class="icon">
+                                <img
+                                    src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5506ec5691cba88bb5b_ico_skills-flexibility.svg">
+                            </div>
+
+                            <div class="info">
+                                <h4>Flexibility</h4>
+                                <p>The ability to switch is an important skill</p>
+                            </div>
+
                         </div>
 
                     </div>
 
-                    <div class="video">
-                        <video autoplay muted loop controls>
-                            <source src="./assets/video/18138479-hd_1920_1080_60fps.mp4" type="video/mp4">
-                        </video>
+                    <div class="media">
+
+                        <div class="stats">
+
+                            <div class="details">
+                                <h3>10</h3>
+                                <p>Years Experiences</p>
+                            </div>
+
+                            <div class="details">
+                                <h3>250</h3>
+                                <p>Types of Courses</p>
+                            </div>
+
+                        </div>
+
+                        <div class="video">
+                            <video muted loop controls>
+                                <source src="./assets/video/18138479-hd_1920_1080_60fps.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
                     </div>
 
                 </div>
@@ -461,11 +491,13 @@
             <div class="slider-buttons">
 
                 <button id="prevBtn">
-                   <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5d8329cf473e60c7c5b_ico-arrow.svg">
+                    <img
+                        src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5d8329cf473e60c7c5b_ico-arrow.svg">
                 </button>
 
                 <button id="nextBtn" class="active">
-                   <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5d8329cf473e60c7c5b_ico-arrow.svg">
+                    <img
+                        src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5d8329cf473e60c7c5b_ico-arrow.svg">
                 </button>
 
             </div>
@@ -481,7 +513,8 @@
             <div class="footer-top">
 
                 <div class="footer-logo">
-                     <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa55008f302348b1f7703_logo.svg">
+                    <img
+                        src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa55008f302348b1f7703_logo.svg">
 
                 </div>
 
@@ -489,11 +522,11 @@
 
                     <div class="footer-column">
 
-                        <a class="topsection">
+                        <a href="#topsection">
                             Find passion
                         </a>
 
-                        <a class="skills">
+                        <a href="#skills">
                             Skills
                         </a>
 
@@ -501,11 +534,11 @@
 
                     <div class="footer-column">
 
-                        <a class="categories">
+                        <a href="#categories">
                             Categories
                         </a>
 
-                        <a class="customers">
+                        <a href="#customers">
                             Customer
                         </a>
 
@@ -517,10 +550,10 @@
 
                     <h3>Join our community</h3>
 
-                        <div class="subscribe-box">
-                        <input type="email" placeholder="Enter category" class="category-input" id="categoryInput" required>
-                        <button onclick="handleSubmit()">GO</button>
-                        </div>
+                    <form class="subscribe-box bottom">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">GO</button>
+                    </form>
 
                 </div>
 
@@ -531,7 +564,8 @@
                 <div class="copyright">
 
                     <div class="circle-logo">
-                       <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/619f7e9a1cc6db8ecfc33794_logo-copyright.svg">
+                        <img
+                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/619f7e9a1cc6db8ecfc33794_logo-copyright.svg">
                     </div>
 
                     <p>2021 Halo Lab. All rights reserved</p>
@@ -540,11 +574,16 @@
 
                 <div class="social-icons">
 
-                    <a href="#"><img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffa14d2842923cf72ce_ico_soc-fb.svg"></a>
-                    <a href="#"><img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffbf8bc3224d3d5178d_ico_soc-behance.svg"></i></a>
-                    <a href="#"><img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffb14d284f5accf72cf_ico_soc-in.svg"></a>
-                    <a href="#"><img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ec00349dffaacd6f2fdf1_ico_soc-inst.svg"></i></a>
-                    <a href="#"><img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffa2d06733e48015aa2_ico_soc-dribbble.svg"></a>
+                    <a href="#"><img
+                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffa14d2842923cf72ce_ico_soc-fb.svg"></a>
+                    <a href="#"><img
+                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffbf8bc3224d3d5178d_ico_soc-behance.svg"></a>
+                    <a href="#"><img
+                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffb14d284f5accf72cf_ico_soc-in.svg"></a>
+                    <a href="#"><img
+                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ec00349dffaacd6f2fdf1_ico_soc-inst.svg"></a>
+                    <a href="#"><img
+                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffa2d06733e48015aa2_ico_soc-dribbble.svg"></a>
 
                 </div>
 
@@ -559,69 +598,189 @@
     </div>
 
     <script>
+
+
+        const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+    const isActive = mobileMenu.classList.contains("active");
+
+    if (isActive) {
+        mobileMenu.classList.add("closing");
+
+        setTimeout(() => {
+            mobileMenu.classList.remove("active", "closing");
+            document.body.classList.remove("menu-open");
+        }, 400); 
+
+        menuToggle.innerHTML = "☰";
+    } else {
+        mobileMenu.classList.add("active");
+        document.body.classList.add("menu-open"); 
+        menuToggle.innerHTML = "✕";
+    }
+});
+
+document.querySelectorAll('.menu-nav .link').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add("closing");
+
+        setTimeout(() => {
+            mobileMenu.classList.remove("active", "closing");
+            document.body.classList.remove("menu-open");
+        }, 400);
+
+        menuToggle.innerHTML = "☰";
+    });
+});
+    </script>
+
+    <!-- <script>
+
         const slides = document.querySelectorAll(".slide");
 
         slides.forEach((slide) => {
             slide.addEventListener("mouseenter", () => {
-
-                slides.forEach((item) => {
-                    item.classList.remove("active");
-                });
-
+                slides.forEach((item) => item.classList.remove("active"));
                 slide.classList.add("active");
             });
         });
-
-        const wrapper = document.querySelector('.card-wrapper');
-        const card1 = wrapper.querySelector('.card-1');
-
-        function checkTrigger() {
-            const card1Bottom = card1.getBoundingClientRect().bottom;
-            const viewportBottom = window.innerHeight;
-
-            if (card1Bottom <= viewportBottom) {
-                wrapper.classList.add('cards-grow');
-            } else {
-                wrapper.classList.remove('cards-grow');
-            }
-        }
-
-        window.addEventListener('scroll', checkTrigger, { passive: true });
-
-        checkTrigger();
-
-
-
         const slider = document.querySelector(".slider");
 
-        slides.forEach((slide) => {
+        slider.addEventListener("mouseleave", () => {
+            slides.forEach((item) => item.classList.remove("active"));
+            slides[0].classList.add("active");
+        });
 
-            slide.addEventListener("click", () => {
+    </script> -->
 
-                slides.forEach(s => s.classList.remove("active"));
-                slide.classList.add("active");
+<script>
 
-                const sliderWidth = slider.offsetWidth;
-                const slideLeft = slide.offsetLeft;
-                const slideWidth = slide.offsetWidth;
+    const slides = document.querySelectorAll(".slide");
+    const slider = document.querySelector(".slider");
 
-                // center clicked card
-                const scrollPosition =
-                    slideLeft - (sliderWidth / 2) + (slideWidth / 2);
+    slides.forEach((slide) => {
 
-                slider.scrollTo({
-                    left: scrollPosition,
-                    behavior: "smooth"
-                });
+        // Desktop Hover
+        slide.addEventListener("mouseenter", () => {
 
+            if (window.innerWidth <= 768) return;
+
+            slides.forEach((item) => {
+                item.classList.remove("active");
             });
 
+            slide.classList.add("active");
+
         });
-    </script>
+
+        // Mobile Click
+        slide.addEventListener("click", () => {
+
+            if (window.innerWidth > 768) return;
+
+            slides.forEach((item) => {
+                item.classList.remove("active");
+            });
+
+            slide.classList.add("active");
+
+        });
+
+    });
+
+    // Desktop Reset
+    slider.addEventListener("mouseleave", () => {
+
+        if (window.innerWidth <= 768) return;
+
+        slides.forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        slides[0].classList.add("active");
+
+    });
+
+</script>
+
+<script>
+
+    const wrapper = document.querySelector('.card-wrapper');
+
+    let lastScrollY = window.pageYOffset;
+    let ticking = false;
+
+    function checkTrigger() {
+
+        // Stop below 570px
+        if (window.innerWidth <= 570) {
+
+            wrapper.classList.remove('cards-down', 'cards-grow');
+            return;
+
+        }
+
+        const currentScrollY = window.pageYOffset;
+
+        const scrollingDown =
+            currentScrollY > lastScrollY;
+
+        lastScrollY = currentScrollY;
+
+        const wrapperRect =
+            wrapper.getBoundingClientRect();
+
+        const inView =
+            wrapperRect.top < window.innerHeight &&
+            wrapperRect.bottom > 0;
+
+        if (inView) {
+
+            wrapper.classList.remove(
+                'cards-down',
+                'cards-grow'
+            );
+
+            wrapper.classList.add(
+                scrollingDown
+                    ? 'cards-down'
+                    : 'cards-grow'
+            );
+
+        } else {
+
+            wrapper.classList.remove(
+                'cards-down',
+                'cards-grow'
+            );
+
+        }
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+
+        if (!ticking) {
+
+            requestAnimationFrame(checkTrigger);
+            ticking = true;
+
+        }
+
+    }, { passive: true });
+
+    window.addEventListener('resize', checkTrigger);
+
+    checkTrigger();
+
+</script>
 
     <script>
 
-        const header = document.getElementById("header");
+        const header = document.querySelector(".header-wrapper");
         const categories = document.getElementById("categories");
         const sections = document.querySelectorAll("section");
         const customers = document.getElementById("customers");
@@ -673,29 +832,27 @@
     </script>
 
     <script>
-        const catlinks = document.querySelectorAll(".cat-nav a");
-
-        catlinks.forEach(link => {
-            link.addEventListener("click", function (e) {
+        const catLinks = document.querySelectorAll('.cat-nav li');        
+        const cardItems = document.querySelectorAll('.card-wrapper .course-item');
+        catLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
                 e.preventDefault();
 
+                catLinks.forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
 
-                catlinks.forEach(l => l.classList.remove("active"));
+                const selected = this.dataset.cat;
 
-
-                this.classList.add("active");
+                if (selected === 'all') {
+                    cardItems.forEach(card => {
+                        card.classList.remove('hidden');
+                    });
+                } else {
+                    cardItems.forEach(card => {
+                        card.classList.add('hidden');
+                    });
+                }
             });
-        });
-
-        const menuToggle = document.getElementById("menuToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
-
-        menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("active");
-
-            menuToggle.innerHTML = mobileMenu.classList.contains("active")
-                ? "✕"
-                : "☰";
         });
 
 
@@ -805,121 +962,16 @@
     </script>
 
     <script>
-        const navlinks = document.querySelectorAll(
-            ".topsection, .categories, .skills, .customers"
-        );
+        function handleSubmit() {
+            const category = document.getElementById('categoryInput');
+            const email = document.getElementById('emailInput');
 
-        navlinks.forEach(link => {
+            if (!category.reportValidity()) return;
+            if (!email.reportValidity()) return;
 
-            link.addEventListener("click", () => {
-
-                let targetId = "";
-
-                if (link.classList.contains("topsection")) {
-                    targetId = "topsection";
-                }
-
-                else if (link.classList.contains("categories")) {
-                    targetId = "categories";
-                }
-
-                else if (link.classList.contains("skills")) {
-                    targetId = "skills";
-                }
-
-                else if (link.classList.contains("customers")) {
-                    targetId = "customers";
-                }
-
-                const targetSection =
-                    document.getElementById(targetId);
-
-                targetSection.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            });
-
-        });
-    </script>
-
-    <script>
-    function handleSubmit() {
-        const category = document.getElementById('categoryInput');
-        const email = document.getElementById('emailInput');
-
-        if (!category.reportValidity()) return;
-        if (!email.reportValidity()) return;
-
-    }
-    </script>
-
-<!-- <script>
-   $(document).ready(function () {
-
-        var offset2 = $(".header").outerHeight();
-
-        var currentScrollPos = window.pageYOffset;
-        var prevScrollpos = window.pageYOffset;
-
-        if (offset2 < currentScrollPos) {
-            $(".header").addClass("on-scroll");
-            $(".header").css("transform", "translateY(0px)");
         }
-        $(this).scroll(function () {
-            if ($(this).scrollTop() > offset2 + 10) {
-                var currentScrollPos = window.pageYOffset;
-                if (prevScrollpos > currentScrollPos) {
-                    // console.log("backward move")
-                    $(".header").addClass("on-scroll");
-                    $(".header").css("transform", "translateY(0px)");
-                } else {
-                    // console.log("forward move")z
-                    if ($(window).width() > 1040) {
-                        $(".header").css("transform", "translateY(-250px)");
-                    }
-                    else {
-                        $(".header").css("transform", "translateY(-100px)");
-                    }
+    </script>
 
-                }
-                if ($(window).width() < 600) {
-                    if (prevScrollpos > currentScrollPos) {
-                        $(".flooting-ad").slideUp();
-                    } else {
-                        $(".flooting-ad").slideDown();
-                    }
-                }
-                // for section page pagination
-                if ($(".nav-pagination") != null) {
-                    if (prevScrollpos > currentScrollPos) {
-                        if ($(window).width() > 1040) {
-                            $(".nav-pagination").css("top", "75px");
-                        }
-                        else if ($(window).width() < 571) {
-                            $(".nav-pagination").css("top", "65px");
-                        }
-                        else {
-                            $(".nav-pagination").css("top", "49px");
-                        }
-                    } else {
-                        $(".nav-pagination").css("top", "0px");
-                    }
-                }
-
-                prevScrollpos = currentScrollPos;
-            }
-            else if ($(this).scrollTop() < offset2 + 10) {
-                $(".header").css("transform", "translateY(-00px)");
-                $(".header").removeClass("on-scroll");
-            }
-            prevScrollpos = window.pageYOffset;
-
-        });
-
-    });
-
-</script> -->
 </body>
 
 </html>
