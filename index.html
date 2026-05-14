@@ -15,37 +15,42 @@
 </head>
 
 <body>
+    
+
+    <!-- Header -->
 
     <header class="header-wrapper">
         <div class="container">
             <div class="header" id="header">
-            <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa55008f302348b1f7703_logo.svg"
-                alt="Skillex Logo" class="logo">
+                <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa55008f302348b1f7703_logo.svg"
+                    alt="Skillex Logo" class="logo">
 
-            <div class="menu-nav" id="mobileMenu">
-                <a href="#topsection" class="link">Find Passion</a>
-                <a href="#categories" class="link">Categories</a>
-                <a href="#skills" class="link">Skills</a>
-                <a href="#customers" class="link">Customers</a>
+                <ul class="menu-nav" id="mobileMenu">
 
-                <div class="mobile-btn-group">
-                    <!-- <a href="#" class="link login">Login</a> -->
-                     <button class="login">Login</a>
+                    <li data-section="#findpassion" class="link">Find Passion</li>
+                    <li data-section="#categories" class="link">Categories</li>
+                    <li data-section="#skills" class="link">Skills</li>
+                    <li data-section="#customers" class="link">Customers</li>
+
+                    <div class="mobile-btn-group">
+                        <button class="login">Login</a>
+                        <button class="btn free-trial">Free Trial</button>
+                    </div>
+                </ul>
+
+                <div class="btn-group">
+                    <button class="login link">Login</a>
                     <button class="btn free-trial">Free Trial</button>
                 </div>
-            </div>
 
-            <div class="btn-group">
-                <a class="link">Login</a>
-                <button class="btn free-trial">Free Trial</button>
+                <button class="menu-toggle" id="menuToggle">☰</button> 
             </div>
-
-            <button class="menu-toggle" id="menuToggle">☰</button> 
-        </div>
-    </div>
+         </div>
     </header>
 
-    <section id="topsection">
+    <!-- Find Passion -->
+
+    <section id="findpassion">
         <div class="container">
             <div class="top-section">
                 <div class="leading-content">
@@ -55,7 +60,7 @@
                         <h2>Grow.</h2>
                     </div>
 
-                    <form class="subscribe-box top">
+                    <form class="subscribe-form top">
                         <input type="text" placeholder="find your passion" class="email-input">
                         <button type="submit">GO</button>
                     </form>
@@ -96,12 +101,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="input hide-system">
-                    <input type="text" placeholder="find your passion" class="email-input">
-                    <button class="go-btn">Go</button>
-                </div> -->
-
-                <form class="subscribe-box middle">
+                <form class="subscribe-form middle">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit">GO</button>
                 </form>
@@ -109,31 +109,35 @@
         </div>
     </section>
 
+    <!-- Categories -->
+
     <section id="categories">
         <div class="container">
-            <div class="categories">
-                <h2>Unlimited access to 100+ instructors.</h2>
-                <!-- <ul class="cat-nav">
-                    <li><a href="#" data-cat="all" class="active">All Categories</a></li>
-                    <li><a href="#" data-cat="entertainment">Entertainment</a></li>
-                    <li><a href="#" data-cat="lifestyle">LifeStyle</a></li>
-                    <li><a href="#" data-cat="writing">Writing</a></li>
-                    <li><a href="#" data-cat="technology">Technology</a></li>
-                    <li><a href="#" data-cat="health">Health</a></li>
-                </ul> -->
+            <div class="courses">
 
-                <ul class="cat-nav">
+                <h2>Unlimited access to 100+ instructors.</h2>
+
+                <!-- <ul class="cat-nav">
                     <li class="active">All Categories</li>
                     <li>Entertainment</li>
                     <li>LifeStyle</li>
                     <li>Writing</li>
                     <li>Technology</li>
                     <li>Health</li>
+                </ul> -->
+
+                <ul class="cat-nav">
+                    <li class="active" data-cat="all">All Categories</li>
+                    <li data-cat="entertainment">Entertainment</li>
+                    <li data-cat="lifestyle">LifeStyle</li>
+                    <li data-cat="writing">Writing</li>
+                    <li data-cat="technology">Technology</li>
+                    <li data-cat="health">Health</li>
                 </ul>
 
-                <div class="card-wrapper">
+                <div class="courses-wrapper">
 
-                    <div class="course-item card-1" data-cat="all">
+                    <div class="course-item card-1" data-cat="entertainment data-popup="popup-1">
 
                         <span class="hover-arrow">
                             <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
@@ -146,12 +150,12 @@
                         </div>
 
                         <div class="content">
-                            <h3>Expert Instructors</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>Sales Marketing</h3>
+                            <p>4 month</p>
                         </div>
 
                     </div>
-                    <div class="course-item card-2" data-cat="all">
+                    <div class="course-item card-2" data-cat="technology" data-popup="popup-2">
                         <span class="hover-arrow">
                             <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
                                 alt="Skillex Logo">
@@ -162,11 +166,11 @@
                             alt="Skillex Logo" class="card-logo">
                         </div>
                         <div class="content">
-                            <h3>Comprehensive Curriculum</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>Data Analytics</h3>
+                            <p>3 month</p>
                         </div>
                     </div>
-                    <div class="course-item card-3" data-cat="all">
+                    <div class="course-item card-3" data-cat="writing" data-popup="popup-3">
                             <span class="hover-arrow">
                                 <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
                                     alt="Skillex Logo">
@@ -177,12 +181,12 @@
                                     alt="Skillex Logo" class="card-logo">
                             </div>
                         <div class="content">
-                            <h3>Flexible Learning</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>Copywriting Pro</h3>
+                            <p>2 month</p>
 
                         </div>
                     </div>
-                    <div class="course-item card-4" data-cat="all">
+                    <div class="course-item card-4" data-cat="writing" data-popup="popup-4">
 
                         <span class="hover-arrow">
                                 <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fd6c0253104adb423d57d_ico_arrow-link.svg"
@@ -196,16 +200,57 @@
                         </div>
 
                         <div class="content">
-                            <h3>Flexible Learning</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>Design Art</h3>
+                            <p>3 Month</p>
                         </div>
 
                     </div>
 
                 </div>
+
+                <!-- popup -->
+                <div class="popup-overlay" id="popupOverlay">
+                    <div class="popup-box">
+
+                        <button class="close-popup">&times;</button>
+
+                        <div class="popup-top">
+                            <img id="popupImage" src="" alt="">
+                        </div>
+
+                        <div class="popup-content">
+                            <div class="left">
+                                <h2 id="popupTitle"></h2>
+
+                                <p>
+                                    Get weekly updates on the newest courses and learning materials.
+                                </p>
+                            </div>
+                            
+
+                            <form class="popup-form">
+
+                                <input 
+                                    type="email" 
+                                    placeholder="Email Your Email"
+                                    required
+                                >
+
+                                <button type="submit">
+                                <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/632c523af7447c2a57b5f65c_ico-arrow-form.svg">
+                                </button>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <!-- Skills -->
 
     <section id="skills">
 
@@ -213,25 +258,18 @@
 
             <div class="skills">
 
-                <div class="top">
-
-                    <div class="title">
-                        <h2>
-                            Get the skills you need for a job that is in demand.
-                        </h2>
-                    </div>
-
-                    <div class="text">
-                        <p>
-                            The modern labor market dictates its own terms.
-                            Today, to be a competitive specialist requires
-                            more than professional skills.
-                        </p>
-                    </div>
-
+                <div class="content">
+                    <h2>
+                        Get the skills you need for a job that is in demand.
+                    </h2>
+                    <p>
+                        The modern labor market dictates its own terms.
+                        Today, to be a competitive specialist requires
+                        more than professional skills.
+                    </p>
                 </div>
 
-                <div class="bottom">
+                <div class="overview">
 
                     <div class="features">
 
@@ -281,7 +319,7 @@
 
                     <div class="media">
 
-                        <div class="stats">
+                        <div class="score-box">
 
                             <div class="details">
                                 <h3>10</h3>
@@ -311,12 +349,16 @@
 
     </section>
 
-    <section class="testimonial-section" id="customers">
+    <!-- Testimonial -->
+
+    <section id="customers">
 
         <div class="container">
+            
+          <div class="testimonials">
 
-            <h2 class="section-title">
-                What our customer say<span>.</span>
+            <h2>
+                What our customer say.
             </h2>
 
             <div class="testimonial-wrapper">
@@ -483,66 +525,69 @@
                         </div>
                     </div>
 
-
                 </div>
 
             </div>
 
             <div class="slider-buttons">
 
-                <button id="prevBtn">
+                <button id="prevBtn" class="prev">
                     <img
                         src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5d8329cf473e60c7c5b_ico-arrow.svg">
                 </button>
 
-                <button id="nextBtn" class="active">
+                <button id="nextBtn" class="next active">
                     <img
                         src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5d8329cf473e60c7c5b_ico-arrow.svg">
                 </button>
 
             </div>
 
+         </div>
+
         </div>
+
 
     </section>
 
-    <div class="footer">
+    <!-- Footer -->
+
+    <footer>
 
         <div class="container">
 
             <div class="footer-top">
 
                 <div class="footer-logo">
-                    <img
-                        src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa55008f302348b1f7703_logo.svg">
+                    <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/617fa55008f302348b1f7703_logo.svg">
 
                 </div>
 
                 <div class="footer-links">
 
-                    <div class="footer-column">
+                    <ul class="footer-column">
 
-                        <a href="#topsection">
+                        <li data-section="#findpassion">
                             Find passion
-                        </a>
+                        </li>
 
-                        <a href="#skills">
+                        <li data-section="#skills">
                             Skills
-                        </a>
+                        </li>
 
-                    </div>
+                    </ul>
 
-                    <div class="footer-column">
+                    <ul class="footer-column">
 
-                        <a href="#categories">
+                        <li data-section="#categories">
                             Categories
-                        </a>
+                        </li>
 
-                        <a href="#customers">
+                        <li data-section="#customers">
                             Customer
-                        </a>
+                        </li>
 
-                    </div>
+                    </ul>
 
                 </div>
 
@@ -550,7 +595,7 @@
 
                     <h3>Join our community</h3>
 
-                    <form class="subscribe-box bottom">
+                    <form class="subscribe-form bottom">
                         <input type="email" placeholder="Enter your email" required>
                         <button type="submit">GO</button>
                     </form>
@@ -572,20 +617,23 @@
 
                 </div>
 
-                <div class="social-icons">
-
-                    <a href="#"><img
-                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffa14d2842923cf72ce_ico_soc-fb.svg"></a>
-                    <a href="#"><img
-                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffbf8bc3224d3d5178d_ico_soc-behance.svg"></a>
-                    <a href="#"><img
-                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffb14d284f5accf72cf_ico_soc-in.svg"></a>
-                    <a href="#"><img
-                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ec00349dffaacd6f2fdf1_ico_soc-inst.svg"></a>
-                    <a href="#"><img
-                            src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffa2d06733e48015aa2_ico_soc-dribbble.svg"></a>
-
-                </div>
+                <ul class="social-icons">
+                    <li>
+                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffa14d2842923cf72ce_ico_soc-fb.svg">
+                    </li>
+                    <li>
+                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffbf8bc3224d3d5178d_ico_soc-behance.svg">       
+                     </li>
+                    <li>
+                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffb14d284f5accf72cf_ico_soc-in.svg">
+                    </li>
+                    <li>
+                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ec00349dffaacd6f2fdf1_ico_soc-inst.svg">
+                    </li>
+                    <li>
+                        <img src="https://assets.website-files.com/617fa48948c7ab24b715140e/618ebffa2d06733e48015aa2_ico_soc-dribbble.svg">
+                    </li>                 
+                </ul>
 
             </div>
 
@@ -595,195 +643,269 @@
             💛 <a href="#">Like & Follow</a> from you. New free to use projects from us.
         </div>
 
-    </div>
+    </footer>
+    
 
     <script>
 
+        // header menu 
 
-        const menuToggle = document.getElementById("menuToggle");
+const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuToggle.addEventListener("click", () => {
+function openMenu() {
+    mobileMenu.classList.add("active");
+    menuToggle.innerHTML = "✕";
+}
+
+function closeMenu() {
+    mobileMenu.classList.add("closing");
+    mobileMenu.classList.remove("active");
+
+    menuToggle.innerHTML = "☰";
+
+    setTimeout(() => {
+        mobileMenu.classList.remove("closing");
+    }, 700);
+}
+
+function toggleMenu() {
     const isActive = mobileMenu.classList.contains("active");
 
     if (isActive) {
-        mobileMenu.classList.add("closing");
-
-        setTimeout(() => {
-            mobileMenu.classList.remove("active", "closing");
-            document.body.classList.remove("menu-open");
-        }, 400); 
-
-        menuToggle.innerHTML = "☰";
+        closeMenu();
     } else {
-        mobileMenu.classList.add("active");
-        document.body.classList.add("menu-open"); 
-        menuToggle.innerHTML = "✕";
+        openMenu();
     }
-});
+}
 
-document.querySelectorAll('.menu-nav .link').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add("closing");
+menuToggle.addEventListener("click", toggleMenu);
 
-        setTimeout(() => {
-            mobileMenu.classList.remove("active", "closing");
-            document.body.classList.remove("menu-open");
-        }, 400);
+/* MENU LINK CLICK */
+document.querySelectorAll(".menu-nav li").forEach(item => {
+    item.addEventListener("click", (e) => {
 
-        menuToggle.innerHTML = "☰";
+        const target = item.getAttribute("data-section");
+
+        if (target) {
+            document.querySelector(target)?.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        closeMenu();
     });
 });
-    </script>
 
-    <!-- <script>
+    //if click the header nav link in mobile menu, close the menu
+
+    document.querySelectorAll('.menu-nav .link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add("closing");
+
+            setTimeout(() => {
+                mobileMenu.classList.remove("active", "closing");
+                document.body.classList.remove("menu-open");
+            }, 400);
+
+            menuToggle.innerHTML = "☰";
+        });
+    });
+
+        // slider
 
         const slides = document.querySelectorAll(".slide");
+        const slider = document.querySelector(".slider");
 
         slides.forEach((slide) => {
+
+            //slide for desktop
+
             slide.addEventListener("mouseenter", () => {
+                if (window.innerWidth <= 570) return;
+
                 slides.forEach((item) => item.classList.remove("active"));
                 slide.classList.add("active");
             });
-        });
-        const slider = document.querySelector(".slider");
 
-        slider.addEventListener("mouseleave", () => {
-            slides.forEach((item) => item.classList.remove("active"));
-            slides[0].classList.add("active");
-        });
+            //slide for mobile
 
-    </script> -->
+            slide.addEventListener("click", () => {
+                if (window.innerWidth > 570) return;
 
-<script>
+                slides.forEach((item) => item.classList.remove("active"));
+                slide.classList.add("active");
 
-    const slides = document.querySelectorAll(".slide");
-    const slider = document.querySelector(".slider");
-
-    slides.forEach((slide) => {
-
-        // Desktop Hover
-        slide.addEventListener("mouseenter", () => {
-
-            if (window.innerWidth <= 768) return;
-
-            slides.forEach((item) => {
-                item.classList.remove("active");
+                slide.scrollIntoView({
+                    behavior: "smooth",
+                    inline: "center",
+                    block: "nearest"
+                });
             });
-
-            slide.classList.add("active");
-
-        });
-
-        // Mobile Click
-        slide.addEventListener("click", () => {
-
-            if (window.innerWidth > 768) return;
-
-            slides.forEach((item) => {
-                item.classList.remove("active");
-            });
-
-            slide.classList.add("active");
-
-        });
 
     });
 
-    // Desktop Reset
+    // In Desktop if leave the mouse show the first slide as active
     slider.addEventListener("mouseleave", () => {
+        if (window.innerWidth <= 570) return;
 
-        if (window.innerWidth <= 768) return;
+        slides.forEach((item) => item.classList.remove("active"));
+        slides[0].classList.add("active");
+    });
+    </script>
 
-        slides.forEach((item) => {
-            item.classList.remove("active");
+    <script>
+
+       const catnavItems = document.querySelectorAll(".cat-nav li");
+const courseItems = document.querySelectorAll(".course-item");
+const coursesWrapper = document.querySelector(".courses-wrapper");
+
+catnavItems.forEach((item) => {
+    item.addEventListener("click", () => {
+
+        catnavItems.forEach((li) => {
+            li.classList.remove("active");
         });
 
-        slides[0].classList.add("active");
+        item.classList.add("active");
+
+        const selectedCat = item.getAttribute("data-cat");
+        let visibleCount = 0;
+
+        courseItems.forEach((card) => {
+            if (selectedCat === "all" || card.getAttribute("data-cat") === selectedCat) {
+                card.classList.remove("hidden");
+                visibleCount++;
+            } else {
+                card.classList.add("hidden");
+            }
+        });
+
+        // Remove existing empty state if any
+        const existingEmpty = document.querySelector(".empty-state");
+        if (existingEmpty) existingEmpty.remove();
+
+        // If no cards visible, show empty state
+        if (visibleCount === 0) {
+            const emptyDiv = document.createElement("div");
+            emptyDiv.classList.add("empty-state");
+            // emptyDiv.innerHTML = `
+            //     <p>No courses available in this category yet.</p>
+            // `;
+            coursesWrapper.appendChild(emptyDiv);
+        }
 
     });
+});
 
-</script>
+  //popup
+   
+    // const courseItems = document.querySelectorAll(".course-item");
+    const overlay = document.getElementById("popupOverlay");
 
-<script>
+    const popupImage = document.getElementById("popupImage");
+    const popupTitle = document.getElementById("popupTitle");
 
-    const wrapper = document.querySelector('.card-wrapper');
+    const closePopup = document.querySelector(".close-popup");
 
-    let lastScrollY = window.pageYOffset;
-    let ticking = false;
+    courseItems.forEach((item) => {
+        item.addEventListener("click", () => {
 
-    function checkTrigger() {
+        const image = item.querySelector(".image-wrapper img").src;
+        const title = item.querySelector("h3").innerText;
 
-        // Stop below 570px
-        if (window.innerWidth <= 570) {
+        popupImage.src = image;
+        popupTitle.innerText = title;
 
-            wrapper.classList.remove('cards-down', 'cards-grow');
-            return;
+        overlay.classList.add("active");
+        document.body.classList.add("popup-open");
+        });
+    });
 
+        // add the classes cards-down and cards-grow when scroll
+
+        const wrapper = document.querySelector('.courses-wrapper');
+
+        let lastScrollY = window.pageYOffset;
+        let ticking = false;
+
+        function checkTrigger() {
+
+            // Stop below 570px
+            if (window.innerWidth <= 570) {
+
+                wrapper.classList.remove('cards-down', 'cards-grow');
+                return;
+
+            }
+
+            const currentScrollY = window.pageYOffset;
+
+            const scrollingDown =
+                currentScrollY > lastScrollY;
+
+            lastScrollY = currentScrollY;
+
+            const wrapperRect =
+                wrapper.getBoundingClientRect();
+
+            const inView =
+                wrapperRect.top < window.innerHeight &&
+                wrapperRect.bottom > 0;
+
+            if (inView) {
+
+                wrapper.classList.remove(
+                    'cards-down',
+                    'cards-grow'
+                );
+
+                wrapper.classList.add(
+                    scrollingDown
+                        ? 'cards-down'
+                        : 'cards-grow'
+                );
+
+            } else {
+
+                wrapper.classList.remove(
+                    'cards-down',
+                    'cards-grow'
+                );
+
+            }
+
+            ticking = false;
         }
 
-        const currentScrollY = window.pageYOffset;
+        window.addEventListener('scroll', () => {
 
-        const scrollingDown =
-            currentScrollY > lastScrollY;
+            if (!ticking) {
 
-        lastScrollY = currentScrollY;
+                requestAnimationFrame(checkTrigger);
+                ticking = true;
 
-        const wrapperRect =
-            wrapper.getBoundingClientRect();
+            }
 
-        const inView =
-            wrapperRect.top < window.innerHeight &&
-            wrapperRect.bottom > 0;
+        }, { passive: true });
 
-        if (inView) {
+        window.addEventListener('resize', checkTrigger);
 
-            wrapper.classList.remove(
-                'cards-down',
-                'cards-grow'
-            );
+        checkTrigger();
 
-            wrapper.classList.add(
-                scrollingDown
-                    ? 'cards-down'
-                    : 'cards-grow'
-            );
-
-        } else {
-
-            wrapper.classList.remove(
-                'cards-down',
-                'cards-grow'
-            );
-
-        }
-
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-
-        if (!ticking) {
-
-            requestAnimationFrame(checkTrigger);
-            ticking = true;
-
-        }
-
-    }, { passive: true });
-
-    window.addEventListener('resize', checkTrigger);
-
-    checkTrigger();
-
-</script>
+    </script>
 
     <script>
 
         const header = document.querySelector(".header-wrapper");
         const categories = document.getElementById("categories");
+
         const sections = document.querySelectorAll("section");
-        const customers = document.getElementById("customers");
+
+        const navItems = document.querySelectorAll("[data-section]");
+
+
+        /* Sticky Header */
 
         window.addEventListener("scroll", () => {
 
@@ -798,178 +920,69 @@ document.querySelectorAll('.menu-nav .link').forEach(link => {
         });
 
 
-        const links = document.querySelectorAll(".header a");
+        /* Scroll to Section */
 
-        window.addEventListener("scroll", () => {
+        navItems.forEach((item) => {
 
-            let current = "";
+            item.addEventListener("click", () => {
 
-            sections.forEach(section => {
+                const targetSection = document.querySelector(
+                    item.dataset.section
+                );
 
-                const top = section.offsetTop - 150;
-                const height = section.clientHeight;
+                if (targetSection) {
 
-                if (
-                    window.scrollY >= top &&
-                    window.scrollY < top + height
-                ) {
-                    current = section.id;
+                    targetSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
                 }
-            });
 
-            links.forEach(link => {
-
-                link.classList.remove("active");
-
-                if (link.classList.contains(current)) {
-                    link.classList.add("active");
-                }
             });
 
         });
 
 
-    </script>
-
-    <script>
-        const catLinks = document.querySelectorAll('.cat-nav li');        
-        const cardItems = document.querySelectorAll('.card-wrapper .course-item');
-        catLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                catLinks.forEach(a => a.classList.remove('active'));
-                this.classList.add('active');
-
-                const selected = this.dataset.cat;
-
-                if (selected === 'all') {
-                    cardItems.forEach(card => {
-                        card.classList.remove('hidden');
-                    });
-                } else {
-                    cardItems.forEach(card => {
-                        card.classList.add('hidden');
-                    });
-                }
-            });
-        });
-
-
-    </script>
-
-    <script>
         const track = document.getElementById("testimonialTrack");
         const nextBtn = document.getElementById("nextBtn");
         const prevBtn = document.getElementById("prevBtn");
-
-        const cards = document.querySelectorAll(".testimonial-card");
-
-        let currentIndex = 0;
+        const card = document.querySelector(".testimonial-card");
 
         function getSettings() {
-
-
             if (window.innerWidth <= 600) {
-
-                return {
-                    moveBy: 1,
-                    visibleCards: 1
-                };
-
+                return { visible: 1 };
             }
-
-
             if (window.innerWidth <= 1000) {
-
-                return {
-                    moveBy: 2,
-                    visibleCards: 2
-                };
-
+                return { visible: 2 };
             }
-
-            return {
-                moveBy: 4,
-                visibleCards: 4
-            };
-
+            return { visible: 4 };
         }
 
-        function updateSlider() {
-
-            const gap = parseInt(
-                window.getComputedStyle(track).gap
-            );
-
-            const cardWidth =
-                cards[0].offsetWidth + gap;
-
-            track.style.transform =
-                `translateX(-${currentIndex * cardWidth}px)`;
-
+        function scrollAmount() {
+            const gap = parseInt(getComputedStyle(track).gap);
+            return card.offsetWidth + gap;
         }
 
         nextBtn.addEventListener("click", () => {
-
             const settings = getSettings();
 
-            const maxIndex =
-                cards.length - settings.visibleCards;
-
-            const nextIndex =
-                currentIndex + settings.moveBy;
-
-            if (nextIndex > maxIndex) {
-
-                currentIndex = maxIndex;
-
-            } else {
-
-                currentIndex = nextIndex;
-
-            }
-
-            updateSlider();
-
+            track.scrollLeft += scrollAmount() * settings.visible;
         });
 
         prevBtn.addEventListener("click", () => {
-
             const settings = getSettings();
 
-            currentIndex -= settings.moveBy;
-
-            if (currentIndex < 0) {
-
-                currentIndex = 0;
-
-            }
-
-            updateSlider();
-
+            track.scrollLeft -= scrollAmount() * settings.visible;
         });
 
-        window.addEventListener("resize", () => {
 
-            currentIndex = 0;
+    function closeModal() {
+        overlay.classList.remove("active");
+        document.body.classList.remove("popup-open");
+    }
 
-            updateSlider();
+    closePopup.addEventListener("click", closeModal);
 
-        });
-
-        updateSlider();
-    </script>
-
-    <script>
-        function handleSubmit() {
-            const category = document.getElementById('categoryInput');
-            const email = document.getElementById('emailInput');
-
-            if (!category.reportValidity()) return;
-            if (!email.reportValidity()) return;
-
-        }
     </script>
 
 </body>
