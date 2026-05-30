@@ -41,19 +41,58 @@ section {
 
 /*header*/
 
+// .header-wrapper {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     transition: all 0.3s ease;
+//     z-index: 999;
+
+//     &.fixed {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         background: #fff;
+//         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+//     }
+// }
+
+// .header {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     height: 100px;
+//     transition: all 0.3s ease;
+//     box-sizing: border-box;
+
+//     .menu-toggle {
+//         display: none;
+//         width: 36px;
+//         height: 36px;
+//         border: 0;
+//         background: #1f1f35;
+//         color: #fff;
+//         cursor: pointer;
+//         font-size: 18px;
+//     }
+
+// }
+
 .header-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
-    transition: all 0.3s ease;
     z-index: 999;
+    position: sticky;        // ← Use sticky instead of toggling fixed
+    top: 0;
+    background: transparent;
+    box-shadow: none;
+    transition: background 0.4s ease, box-shadow 0.4s ease, height 0.4s ease;
 
     &.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
         background: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
 }
 
@@ -63,9 +102,12 @@ section {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    padding: 0 20px;
-    transition: all 0.3s ease;
     box-sizing: border-box;
+    transition: height 0.4s ease;   // ← Smooth height shrink on scroll
+
+    &.shrink {
+        height: 70px;               // ← Shrinks slightly when scrolled
+    }
 
     .menu-toggle {
         display: none;
@@ -77,28 +119,27 @@ section {
         cursor: pointer;
         font-size: 18px;
     }
-
 }
 
-    .link {
-        font-family: $base-font;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 130%;
-        cursor: pointer;
-        color: #000;
-        box-shadow: inset 0 0 0 0 $green-color;
-        transition: all 0.3s ease;
-        
+.link {
+    font-family: $base-font;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    cursor: pointer;
+    color: #000;
+    box-shadow: inset 0 0 0 0 $green-color;
+    transition: all 0.3s ease;
+    
 
-        &:hover {
-            box-shadow: inset 0 -9px 0 0 $green-color;
-        }
-
-        &.active {
-            box-shadow: inset 0 -9px 0 0 $green-color;
-        }
+    &:hover {
+        box-shadow: inset 0 -9px 0 0 $green-color;
     }
+
+    &.active {
+        box-shadow: inset 0 -9px 0 0 $green-color;
+    }
+}
 
 .mobile-btn-group{
     display: none;
@@ -195,16 +236,17 @@ section {
             .slide-content {
                 .category {
                     font-size: 24px;
-                    transform: rotate(270deg);
-                    background: $navy-blue;
                     width: 100px;
                     height: 100px;
                     position: absolute;
                     bottom: 20px;
+                    background: $navy-blue;
                     color: #fff;
                     z-index: 2;
                     padding-top: 10px;
                     padding-left: 20px;
+                    transform: rotate(270deg);
+
                 }
 
                 .hover-text {
@@ -347,78 +389,193 @@ section {
     }
 }
 
+// .courses-wrapper {
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 20px;
+//     transition: align-items 0.3s ease;
+
+//     // bottom scroll state
+//     &.align-bottom {
+//         align-items: flex-end;
+//     }
+
+//     // top scroll state
+//     &.align-top {
+//         align-items: flex-start;
+//     }
+
+//     // &.cards-grow {
+
+//     //     align-items: flex-end;
+//     //     transition: all 0.3s ease;
+
+//     //      .course-item{
+//     //         &.card-2 {
+//     //             .image-wrapper {
+//     //                 img {
+//     //                     height: 270px;
+//     //                 }
+//     //             }
+//     //         }
+//     //         &.card-3 {
+//     //             .image-wrapper {
+//     //                 img {
+//     //                     height: 310px;
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+//     // }
+
+//     // &.cards-down {
+//     //     align-items: stretch;
+//     //     transition: all 0.3s ease;
+
+//     //     .course-item{
+//     //         &.card-2 {
+//     //             .image-wrapper {
+//     //                 img {
+//     //                     height: 270px;
+//     //                 }
+//     //             }
+//     //         }
+//     //         &.card-3 {
+//     //             .image-wrapper {
+//     //                 img {
+//     //                     height: 310px;
+//     //                 }
+//     //             }
+//     //         }
+//     //     }
+
+        
+//     // }
+
+//     .course-item {
+
+//         display: flex;
+//         flex-direction: column;
+//         // transition: transform 0.5s ease;
+//         // will-change: transform;
+//         width: 100%;
+
+//         transition: transform 0.5s ease;
+//         will-change: transform;
+
+//                 .image-wrapper {
+//             position: relative;
+//             border-radius: 16px;
+//             overflow: hidden;
+//             img {
+//                 display: block;
+//                 width: 100%;
+//                 height: 230px;
+//                 object-fit: cover;
+//                 transition: height 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+//             }
+//         }
+
+//         .hover-arrow {
+//             position: absolute;
+//             top: 12px;
+//             right: 12px;
+//             z-index: 2;
+//             width: 34px;
+//             height: 34px;
+//             background: #fff;
+//             border-radius: 50%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             opacity: 0;
+//             transition: opacity 0.2s ease;
+//             pointer-events: none;
+
+//             img {
+//                 width: 14px;
+//                 height: 14px;
+//             }
+//         }
+
+//         .content {
+//             padding: 14px;
+
+//             h3 {
+//                 font-size: 15px;
+//                 font-weight: 600;
+//                 color: #111;
+//                 margin-bottom: 6px;
+
+//                 &:hover {
+//                     color: $green-color;
+//                 }
+//             }
+
+//             p{
+//                 font-family: $content-font;
+//                 font-size: 14px;
+//                 color: #888;
+//                 line-height: 130%;
+//                 margin:0px;
+//             }
+//         }
+
+//          // default heights
+//         &.card-1 img,
+//         &.card-4 img {
+//             height: 230px;
+//         }
+
+//         // little taller
+//         &.card-2 img {
+//             height: 290px;
+//         }
+
+//         // more taller
+//         &.card-3 img {
+//             height: 350px;
+//         }
+
+//         &.hidden{
+//             visibility: hidden;
+//         }
+
+//         &:hover {
+//             .hover-arrow {
+//                 opacity: 1;
+//             }
+//         }
+
+//     }
+
+// }
+
 .courses-wrapper {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    transition: align-items 0.3s ease;
 
-    &.cards-grow {
-
-        align-items: flex-end;
-        transition: all 0.3s ease;
-
-         .course-item{
-            &.card-2 {
-                .image-wrapper {
-                    img {
-                        height: 270px;
-                    }
-                }
-            }
-            &.card-3 {
-                .image-wrapper {
-                    img {
-                        height: 310px;
-                    }
-                }
-            }
-        }
-    }
-
-    &.cards-down {
-        align-items: stretch;
-        transition: all 0.3s ease;
-
-        .course-item{
-            &.card-2 {
-                .image-wrapper {
-                    img {
-                        height: 270px;
-                    }
-                }
-            }
-            &.card-3 {
-                .image-wrapper {
-                    img {
-                        height: 310px;
-                    }
-                }
-            }
-        }
-
-        
-    }
+    &.align-bottom { align-items: flex-end; }
+    &.align-top { align-items: flex-start; }
 
     .course-item {
-
+        flex: 0 0 calc(25% - 15px);  // ← fixed width, never stretches
+        width: calc(25% - 15px);      // ← backup for older browsers
         display: flex;
         flex-direction: column;
         transition: transform 0.5s ease;
         will-change: transform;
-        width: 100%;
-
-        &.hidden{
-            visibility: hidden;
-        }
 
         .image-wrapper {
             position: relative;
             border-radius: 16px;
             overflow: hidden;
+
             img {
                 display: block;
                 width: 100%;
-                height: 230px;
                 object-fit: cover;
                 transition: height 0.55s cubic-bezier(0.4, 0, 0.2, 1);
             }
@@ -446,11 +603,7 @@ section {
             }
         }
 
-        &:hover {
-            .hover-arrow {
-                opacity: 1;
-            }
-        }
+        &:hover .hover-arrow { opacity: 1; }
 
         .content {
             padding: 14px;
@@ -460,24 +613,38 @@ section {
                 font-weight: 600;
                 color: #111;
                 margin-bottom: 6px;
-
-                &:hover {
-                    color: $green-color;
-                }
+                &:hover { color: $green-color; }
             }
 
-            p{
+            p {
                 font-family: $content-font;
                 font-size: 14px;
                 color: #888;
                 line-height: 130%;
-                margin:0px;
+                margin: 0;
             }
         }
 
+        &.card-1 img, &.card-4 img { height: 230px; }
+        &.card-2 img { height: 290px; }
+        &.card-3 img { height: 350px; }
+
+        // ← hidden: stays in layout, shows empty box
+        &.hidden {
+    visibility: hidden;
+    pointer-events: none;
+
+    .image-wrapper::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #f5f5f5;
+        border: 2px dashed #e0e0e0;
+        border-radius: 16px;
+        z-index: 1;
     }
-
-
+}
+    }
 }
 
 /* skills */
@@ -727,11 +894,11 @@ section {
 
 
 .footer-top{
-    padding: 0px 0 40px;
     display: flex;
     justify-content: space-between;
     gap: 40px;
     border-bottom: 1px solid #ddd;
+    padding: 0px 0 40px;
 
     .footer-links {
         // display: flex;
@@ -749,7 +916,7 @@ section {
 
             li {
                width: fit-content;
-               padding-bottom: 20px;
+            //    padding-bottom: 20px;
             }
         }
     }
@@ -1014,7 +1181,6 @@ section {
     }
 }
 
-
 @media (max-width: 1000px) {
 
     /* Header */
@@ -1251,7 +1417,6 @@ section {
         }
     }
 
-
     /* Popup */
     .popup-box {
         .popup-content {
@@ -1366,6 +1531,7 @@ section {
             height: 300px;
         }
         .course-item {
+            width: 100%;
             &.hidden{
                 display: none;
             }
